@@ -1,0 +1,128 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(Sporting_Grotesque-Bold_web.otf);
+  }
+body {
+    position: absolute;
+    font-family:monospace;
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    z-index: 1000;
+}
+
+.song-info {
+    font-family: myFirstFont;
+    background-image: url(https://i.pinimg.com/564x/2b/68/23/2b68235224fd25df6a78e5ad85cc1fe8.jpg);
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size:cover;
+    font-size: 16px;
+    text-align: center;
+    padding:30px;
+    margin: 300px;
+    z-index: 1000;
+    border: .5px solid white;
+
+}
+.song-info img {
+    max-width:200px;
+}
+.song-info img:hover {
+    cursor:grabbing;
+    filter:blur(5px);
+}
+a:link {
+    color: whitesmoke;
+}
+a:visited {
+    color:rgb(135, 135, 204);
+    text-decoration: none;
+}
+a:hover {
+    filter:blur(5px);
+}
+a:active {
+    color: yellow;
+}
+a {
+    cursor: grab;
+}
+.verse {
+
+    font-size: 22px;
+    line-height:50px;
+    color: navy;
+    margin: 250px;
+    max-height:500px;
+    z-index: auto;
+    border: 5px solid white;
+    border-radius: 100px;
+    background-color: whitesmoke;
+    padding: 45px;
+}
+.verse:hover{
+    animation: rotation 10s infinite;
+
+
+}
+.pre-chorus {
+    color: grey;
+    font-weight: bold;
+    line-height:36px;
+    text-align: right;
+    letter-spacing: 4px;
+    background-color: whitesmoke;
+    padding: 25px;
+}
+::selection{
+    background-color: blue;
+    color: pink;
+    font-size: 16px;
+}
+.chorus {
+    z-index: -1;
+    border-radius: 50%;
+    margin: 600px;
+    letter-spacing: 15px;
+    text-align: center;
+    animation: grow-and-shrink 3s infinite;
+    border-radius: 50%;
+}
+.build, .drop, .outro {
+    line-height: 50px;
+    letter-spacing: 20px;
+    color: lightgrey;
+    border: .5px dashed whitesmoke;
+    margin:500px;
+    min-height: 30px;
+    min-width: 50px;
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  @keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 45px); }
+    100%   { transform: translate(0, -300px); }   
+}
+@keyframes grow-and-shrink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
